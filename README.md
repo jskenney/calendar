@@ -13,3 +13,9 @@ git clone --recursive https://github.com/jskenney/calendar-core.git
 ```
 
 At this point, and assuming you cloned into a directory within a PHP capable webserver, you should be able to go to the XX123 directory on your webserver.  To update the software in the future just perform a pull from within the calendar-core directory.
+
+# Updating files
+Within the calendar-core directory, run the following command to update the calendar core
+```
+git pull --recurse-submodules
+```
