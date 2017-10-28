@@ -1,0 +1,3 @@
+[submodule "calendar-core"]
+	path = calendar-core
+	url = https://github.com/jskenney/calendar-core.git
