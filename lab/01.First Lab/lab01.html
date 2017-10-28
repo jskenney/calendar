@@ -1,0 +1,81 @@
+<h2>Welcome to the first lab</h2>
+
+<p>
+  The file you are currently reading is
+  <code>./lab/01.First Lab/lab01.html</code>.
+</p>
+<p>
+  The calendar system (by default) will use the <code>index.html</code>
+  file within the specific class directory as the page that it shows the user.
+  This file could be easily sym-linked to a different file, via the command line,
+  in this case the following command was run to link lab01.html to index.html:
+  <pre><code class="text">ln -s lab01.html index.html</code></pre>
+</p>
+
+<p>
+  For simplicity you could just make the lecture/lab file <code>index.html</code>
+  within the directory.
+</p>
+
+<h4>LaTex and Formulas</h4>
+<p>
+  The <b>MathJax</b> library is included within the calendar, and will allow you
+  to embed formulas, example:
+  $$
+  P^i_t = P_0 + V^i_0t + \frac{1}{2}at^2
+  $$
+  We can also do formulas inline with the text like \( a = 47 t \),
+  just note how we surround the two examples.
+</p>
+
+<h4>Embedding Source Code</h4>
+<p>
+  If you want to show users code, the <b>hightlight.js</b> library is included.
+  All you need to do is place the source-code between a
+  <b>&lt;pre&gt;</b> and <b>&lt;code&gt;</b> tags.  The library will
+  attempt to guess the language that you are using, although this
+  can be overriden (see example in the source to this page).
+</p>
+<pre><code class="python"><codeinject src="example.py"></code></pre>
+
+<h4>Calendar Features</h4>
+
+<p>
+  For the purposes of examples, and how to use some of the features of the
+  calendar system:
+</p>
+
+<p>
+  A few values are automatically populated for you, unless explicitly defined in $PAGE_MODIFY, these
+  include:
+  <ul>
+    <li>
+      <b>type</b> - What type of class we are currently in (example class, project, lab, exam...)
+      - <b><replace value="type"></b>
+    </li>
+    <li>
+      <b>ctype</b> - Same as <b>type</b>, except the first character is <b><u>C</u></b>apitalized.
+      - <b><replace value="ctype"></b>
+    </li>
+    <li>
+      <b>event</b> - What the number of this class/lab/etc is.
+      - <b><replace value="event"></b>
+    </li>
+    <li>
+      <b>zevent</b> - What the number of this class/lab/etc is (2 digits zero filled).
+      - <b><replace value="zevent"></b>
+    </li>
+    <li>
+      <b>title</b> - The title of this specific class/lab/etc.
+      - <b><replace value="title"></b>
+    </li>
+    <li>
+      <b>course</b> - The defined course number, example: IT350.
+      - <b><replace value="course"></b>
+    </li>
+    <li>
+      <b>coursename</b> - The long title of the course, example: Web and Internet Programming
+      - <b><replace value="coursename"></b>
+    </li>
+  </ul>
+</p>

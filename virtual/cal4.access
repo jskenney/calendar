@@ -1,0 +1,18 @@
+# Protect the main contents of lab_99 until December 31st
+lab_99 12 31
+
+# Unlock lab99.html on December 15th
+lab99.html	12 15
+
+# Unlock the specific homework (in a non-standard directory)
+homework/homework99.html	12 15
+
+# Hide the homework for class 99 until Dec 15th
+class_99/homework 12  15
+
+# Hide everything with class 98 until Dec 1st
+class_98/all  12  1
+
+# Hide a specific file within class 97
+# Yes, you can specify year as well...
+class_97/specific.txt 1 1 2099

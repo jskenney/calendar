@@ -1,0 +1,12 @@
+# Add the file homework/homework99.html to class 99 as homework.html
+homework.html	homework/homework99.html	class	99
+
+# Do you have a specific template for how labs are layed out/requirements/etc,
+# Why not make that the base for all of the labs?
+# Inside of docs/lab-template.html, you could have a line like:
+# <!-- load in notes from the lab --> <inject src="actual_lab.html">
+# Which would cause the actual_lab.html file from within the directory to
+# be inserted into the text.
+index.html docs/lab-template.html lab 80
+index.html docs/lab-template.html lab 81
+index.html docs/lab-template.html lab 82
