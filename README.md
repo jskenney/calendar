@@ -17,5 +17,6 @@ At this point, and assuming you cloned into a directory within a PHP capable web
 # Updating files
 Within the calendar-core directory, run the following command to update the calendar core
 ```
+git submodule update --recursive --remote
 git pull --recurse-submodules
 ```
