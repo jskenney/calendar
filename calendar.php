@@ -43,6 +43,12 @@
                        'server'=>'midn.cs.usna.edu',
                        'servershort'=>'midn');
 
+
+  # Custom CSS, by default the CSS has already been configured for the
+  # calendar system (and is embedded within the calendar-core repo)
+  # If you would like to use your own CSS provide the information
+  // $CUSTOMCSS = array('class'=>array('docs/custom1.css', 'docs/custom2.css'));
+
   # By default the system only highlights classes and labs on the navbar
   # modify the following to change this.
   # Selection of Glyphicons can be found at https://getbootstrap.com/docs/3.3/components/
@@ -50,7 +56,7 @@
   //                           'lab' => 'glyphicon-knight');
   # You can also define $NAVBAR_DROPDOWNS_INSTRUCTOR for options
   # when logged on
-  
+
   # Show Weekends
   $WEEKENDS = False;
 
