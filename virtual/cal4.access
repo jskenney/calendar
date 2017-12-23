@@ -1,18 +1,29 @@
-# Protect the main contents of lab_99 until December 31st
-lab_99 12 31
+# Our First Class always visible
+class_1 1 1 1999
 
-# Unlock lab99.html on December 15th
-lab99.html	12 15
+# Normal Opening Times for classes
+project -0
+class -sunday
+lab -sunday
+capstone -sunday
+setup -sunday
 
-# Unlock the specific homework (in a non-standard directory)
-homework/homework99.html	12 15
+# Solutions, exams never, everything else 1 week later
+lab/lab-solution +7
+project/lab-solution +7
+project/homework-solution +7
+class/homework-solution +7
+exam 99 99 9999
 
-# Hide the homework for class 99 until Dec 15th
-class_99/homework 12  15
+# Notes
+lab/notes 1 1 1999
+class/notes 1 1 1999
+project/notes 1 1 1999
+exam/notes 1 1 1999
 
-# Hide everything with class 98 until Dec 1st
-class_98/all  12  1
-
-# Hide a specific file within class 97
-# Yes, you can specify year as well...
-class_97/specific.txt 1 1 2099
+# Readings
+class/instructor 99 99 9999
+lab/instructor 99 99 9999
+project/instructor 99 99 9999
+exam/instructor 99 99 9999
+capstone/instructor 99 99 9999
