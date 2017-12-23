@@ -18,11 +18,12 @@
 
   # Combine specific days on the calendar, useful for those days where a lab becomes
   # a double class period...
-  # Example: $COMBINE = array('class'=>array(3=>array('class', 'class')));
+  # Example: $COMBINE = array('class'=>array(3=>array('class', 'lab')));
+  # This example above would add an additional class and lab to class #3
   $COMBINE = array();
 
   # What is the default schedule for this class
-  # use 1-7 (as Mon -> Fri), or use 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'
+  # use 1-7 (as mon -> fri), or use 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'
   $DOW = array('mon'=>'class',
                'wed'=>'lab',
                'fri'=>'class');
@@ -43,7 +44,6 @@
                        'server'=>'midn.cs.usna.edu',
                        'servershort'=>'midn');
 
-
   # Custom CSS, by default the CSS has already been configured for the
   # calendar system (and is embedded within the calendar-core repo)
   # If you would like to use your own CSS provide the information
@@ -52,10 +52,14 @@
   # By default the system only highlights classes and labs on the navbar
   # modify the following to change this.
   # Selection of Glyphicons can be found at https://getbootstrap.com/docs/3.3/components/
-  // $NAVBAR_DROPDOWNS = array('class' => 'glyphicon-apple',
-  //                           'lab' => 'glyphicon-knight');
-  # You can also define $NAVBAR_DROPDOWNS_INSTRUCTOR for options
-  # when logged on
+  $NAVBAR_DROPDOWNS = array('class' => 'glyphicon-apple',
+                            'lab' => 'glyphicon-knight');
+
+  # If you want the instructor to have different menus
+  $NAVBAR_DROPDOWNS_INSTRUCTOR = array('class' => 'glyphicon-apple',
+                            'lab' => 'glyphicon-knight',
+                            'capstone'=> 'glyphicon-erase',
+                            'exam' => 'glyphicon-hourglass');
 
   # Show Weekends
   $WEEKENDS = False;
@@ -69,6 +73,7 @@
   # Access Log, if you would like to keep a history of accesses to your
   # system, provide a filename, otherwise leave this unset
   # Make sure that the web user can write to the root of this directory
+  # and can write to this file
   // $ACCESS_LOG = 'access.log';
 
   # Admin password to override hidden-ness!  This will allow you to see all files,
@@ -92,7 +97,7 @@
 
   # Place a file into a directory virtually using a config file
   # -> CONTENTS LIKE:
-  # notes.html<tab>homework/homework01.html<tab>COMPONENT<tab>day
+  # notes.html<tab>homework/homework01.html<tab>COMPONENT<tab>eventNumber
   # -> Where COMPONENT based off of $DOW or $OVERIDE (values like class, lab, etc)
   $CLASS_FILE = 'virtual/cal4.virtual';
 
