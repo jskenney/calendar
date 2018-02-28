@@ -1,1 +1,4 @@
-  
+AuthUserFile /etc/htpasswd
+AuthType Basic
+AuthName "Direct Access To Files"
+Require valid-user
