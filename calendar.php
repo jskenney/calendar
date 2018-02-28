@@ -2,25 +2,35 @@
 
   # Calendar Version 4.0
 
+  # IMPORTANT DATES for FALL 2018 (AY19)
+  # Classes Begin       = Mon 20 AUG
+  # 6wk Exams           = 24->28 Sep
+  # 12wk Exams          = 29Oct->2Nov
+  # Last day of classes = Thu 6 DEC
+  # Exam Period         = 10-18 DEC
+
   # Override a specific day for things such as a different type
   # of class (exams, practicum, project, etc) or for the eventual
   # snow day or holiday, takes the format of
   # $OVERRIDE = array(MONTH# => array(DAY# => 'new type',
   #                                   DAY# => 'new type'),
   #                   MONTH# => array(DAY# => 'new type'));
-
-  # This example is for Spring 2018
-  $OVERRIDE = array(1 => array(9  => 'class', 15 => 'HOLIDAY'),
-                    2 => array(19 => 'HOLIDAY', 14 => 'exam'),
-                    3 => array(12 => 'HOLIDAY', 13 => 'HOLIDAY', 14 => 'HOLIDAY', 15 => 'HOLIDAY', 16 => 'HOLIDAY'),
-                    4 => array(4  => 'exam'),
-                    5 => array(10 => 'exam'));
+  $OVERRIDE = array(9 =>array(3 =>'HOLIDAY', 4=>'monday schedule', 28=>'exam'),
+                    10=>array(8 =>'HOLIDAY'),
+                    11=>array(2 =>'exam', 12=>'HOLIDAY', 21=>'Friday Schedule', 22=>'HOLIDAY', 22=>'HOLIDAY'),
+                    12=>array(6 =>'final class', 18=>'final exam'));
 
   # Combine specific days on the calendar, useful for those days where a lab becomes
   # a double class period...
   # Example: $COMBINE = array('class'=>array(3=>array('class', 'lab')));
   # This example above would add an additional class and lab to class #3
   $COMBINE = array();
+
+  # When does this class start, and how long (months) is it?
+  $MONTH_START = 8;
+  $DAY_START = 20;
+  $MONTH_END = 12;
+  $YEAR = 2018;
 
   # What is the default schedule for this class
   # use 1-7 (as mon -> fri), or use 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'
@@ -35,7 +45,7 @@
   $COURSENAME = 'Applied Something';
 
   # Set Defaults Titles for the pages (easily overriden by changing these in the pages)
-  $PAGE_TITLE = "$COURSE (Fall 2018)";
+  $PAGE_TITLE = "$COURSE (Fall $YEAR)";
 
   # Dynamically change content within a page based on these variables
   # This will use the <replace value="tag">  with the value in $PAGE_MODIFY
@@ -63,12 +73,6 @@
 
   # Show Weekends
   $WEEKENDS = False;
-
-  # When does this class start, and how long (months) is it?
-  $MONTH_START = 1;
-  $DAY_START = 9;
-  $MONTH_END = 5;
-  $YEAR = 2018;
 
   # Access Log, if you would like to keep a history of accesses to your
   # system, provide a filename, otherwise leave this unset
