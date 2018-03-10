@@ -68,7 +68,6 @@
   # If you want the instructor to have different menus
   $NAVBAR_DROPDOWNS_INSTRUCTOR = array('class' => 'glyphicon-apple',
                             'lab' => 'glyphicon-knight',
-                            'capstone'=> 'glyphicon-erase',
                             'exam' => 'glyphicon-hourglass');
 
   # Show Weekends
@@ -92,6 +91,9 @@
   # Default start page, set to true to automatically show the current days
   # lecture.  Otherwise the standard homepage will be shown.
   $DEFAULT_TODAYS_LECTURE = False;
+
+  # Use a list view as a calendar instead of the traditional montly calendar
+  #$CALENDAR_TOOL = 'calendar_display_alt';
 
   # Unlock a file for viewing by naming the file xxxx.MONTH.DAY.ext, OR
   # By placing that information into consilidated into a single file
