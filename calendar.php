@@ -83,6 +83,10 @@
   # including those not linked, and those that have time delayed availability
   $ADMIN = 'mypassword';
 
+  # By Default, the instructor stays logged on for 12 hours (43200 seconds)
+  # This can be overriden if you want a longer or shorter period.
+  // $LOGON_TIME = 43200;
+
   # The secret makes it harder for someone to set the SESSION Variables
   # To gain access without knowing the password...  This is used by the
   # authenticator
