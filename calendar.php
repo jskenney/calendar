@@ -170,6 +170,9 @@
                'homework-solution' => 'answers.txt',
                'instructor' => 'instructor.txt');
 
+  # Ignore the HTML5 <a name> warnings.
+  $IGNORE_A_TAG_WARNING = True;
+
   # Run the main calendar script
   # Don't remove this line
   require_once('calendar/calendar_main.php');
