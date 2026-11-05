@@ -2,12 +2,12 @@
 
   # Calendar Version 4.0
 
-  # IMPORTANT DATES for FALL 2018 (AY19)
-  # Classes Begin       = Mon 20 AUG
-  # 6wk Exams           = 24->28 Sep
-  # 12wk Exams          = 29Oct->2Nov
-  # Last day of classes = Thu 6 DEC
-  # Exam Period         = 10-18 DEC
+  # IMPORTANT DATES for FALL 2026 (sample values, replace with your own)
+  # Classes Begin       = Mon 24 AUG
+  # 6wk Exams           = 28 Sep -> 2 Oct
+  # 12wk Exams          = 2 -> 6 Nov
+  # Last day of classes = Thu 10 DEC
+  # Exam Period         = 14-18 DEC
 
   # Override a specific day for things such as a different type
   # of class (exams, practicum, project, etc) or for the eventual
@@ -15,10 +15,12 @@
   # $OVERRIDE = array(MONTH# => array(DAY# => 'new type',
   #                                   DAY# => 'new type'),
   #                   MONTH# => array(DAY# => 'new type'));
-  $OVERRIDE = array(9 =>array(3 =>'HOLIDAY', 4=>'monday schedule', 28=>'exam'),
-                    10=>array(8 =>'HOLIDAY'),
-                    11=>array(2 =>'exam', 12=>'HOLIDAY', 21=>'Friday Schedule', 22=>'HOLIDAY', 22=>'HOLIDAY'),
-                    12=>array(6 =>'final class', 18=>'final exam'));
+  # Types with spaces or capitals are matched to directories in lower case
+  # with dashes, so 'final exam' content goes in the final-exam directory.
+  $OVERRIDE = array(9 =>array(7 =>'HOLIDAY', 8=>'monday schedule'),
+                    10=>array(2 =>'exam', 12=>'HOLIDAY'),
+                    11=>array(6 =>'exam', 11=>'HOLIDAY', 25=>'Friday Schedule', 26=>'HOLIDAY'),
+                    12=>array(10=>'final class', 18=>'final exam'));
 
   # Combine specific days on the calendar, useful for those days where a lab becomes
   # a double class period...
@@ -28,12 +30,12 @@
 
   # When does this class start, and how long (months) is it?
   $MONTH_START = 8;
-  $DAY_START = 20;
+  $DAY_START = 24;
   $MONTH_END = 12;
-  $YEAR = 2018;
+  $YEAR = 2026;
 
   # What is the default schedule for this class
-  # use 1-7 (as mon -> fri), or use 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'
+  # use 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'
   $DOW = array('mon'=>'class',
                'wed'=>'lab',
                'fri'=>'class');
@@ -74,10 +76,11 @@
   $WEEKENDS = False;
 
   # Access Log, if you would like to keep a history of accesses to your
-  # system, provide a filename, otherwise leave this unset
-  # Make sure that the web user can write to the root of this directory
-  # and can write to this file
-  // $ACCESS_LOG = 'access.log';
+  # system, provide a filename, otherwise leave this unset.
+  # Keep the log OUTSIDE of the web root (it records IP addresses), and make
+  # sure that the web user can write to it.  Passwords and lock codes are
+  # removed from the logged URLs.
+  // $ACCESS_LOG = '/var/log/cal4/SI123-access.log';
 
   # Admin password to override hidden-ness!  This will allow you to see all files,
   # including those not linked, and those that have time delayed availability
@@ -87,9 +90,10 @@
   # This can be overriden if you want a longer or shorter period.
   // $LOGON_TIME = 43200;
 
-  # The secret makes it harder for someone to set the SESSION Variables
-  # To gain access without knowing the password...  This is used by the
-  # authenticator
+  # The secret is used to build file keys and login tokens.  It MUST be
+  # changed to a long random value, the calendar will not show any content
+  # while it has the sample value below.  installer.sh sets it for you, or
+  # generate one with:  php -r 'echo bin2hex(random_bytes(32));'
   $SECRET = 'A really long phrase that should be impossible to guess, you dont need to remember this...';
 
   # Default start page, set to true to automatically show the current days
@@ -172,6 +176,17 @@
 
   # Ignore the HTML5 <a name> warnings.
   $IGNORE_A_TAG_WARNING = True;
+
+  # Only home, policy, resources, error and lock can be opened with ?load=
+  # List any other pages (name.html or name.pdf in this directory) here.
+  // $LOAD_PAGES = array('syllabus', 'schedule');
+
+  # Content files and symbolic link targets must be inside this directory.
+  # List other directories here to allow links to shared material.
+  // $ALLOWED_PATHS = array('/home/me/shared-notes');
+
+  # Allow ?debug=1 (instructor only) to print internal state.
+  // $DEBUG_MODE = True;
 
   # Run the main calendar script
   # Don't remove this line

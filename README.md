@@ -23,6 +23,12 @@ rm -rf .git .gitmodules calendar-core
 git clone --recursive https://github.com/jskenney/calendar-core.git
 ```
 
+Then edit calendar.php and set `$ADMIN` to your own password and `$SECRET` to a long random value (the calendar will not show any content while `$SECRET` has the sample value):
+
+```
+php -r 'echo bin2hex(random_bytes(32));'
+```
+
 At this point, and assuming you cloned into a directory within a PHP capable webserver, you should be able to go to the XX123 directory on your webserver.  To update the software in the future just perform a pull from within the calendar-core directory.
 
 # Updating files
