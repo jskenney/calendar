@@ -1,4 +1,4 @@
 [submodule "calendar-core"]
 	path = calendar-core
-	url = https://github.com/jskenney/calendar-core.git
-	branch = master
+	url = https://github.com/jskenney/calendar2.git
+	branch = main
